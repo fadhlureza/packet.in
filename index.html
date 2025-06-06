@@ -1,289 +1,536 @@
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Paket.in - Revolusi Pengiriman Paket Mandiri</title>
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Custom Tailwind Configuration -->
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'brand-bg': '#F8FAFC',
-                        'brand-light-blue': '#D9EAFD',
-                        'brand-mid-blue': '#BCCCDC',
-                        'brand-dark-gray': '#374151', // A darker gray for better text contrast
-                        'brand-text': '#1f2937',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "brand-bg": "#F8FAFC",
+              "brand-light-blue": "#D9EAFD",
+              "brand-mid-blue": "#BCCCDC",
+              "brand-dark-gray": "#374151", // A darker gray for better text contrast
+              "brand-text": "#1f2937",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
     </script>
 
     <style>
-        /* Small styling tweaks */
-        .gradient-text {
-            background: linear-gradient(to right, #3b82f6, #1e40af);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+      /* Small styling tweaks */
+      .gradient-text {
+        background: linear-gradient(to right, #3b82f6, #1e40af);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     </style>
-</head>
-<body class="bg-brand-bg font-sans text-brand-text">
-
+  </head>
+  <body class="bg-brand-bg font-sans text-brand-text">
     <!-- Header / Navbar -->
-    <header class="bg-brand-bg/80 backdrop-blur-lg sticky top-0 z-50 border-b border-brand-mid-blue/50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-brand-text">
-                Paket.<span class="text-blue-600">in</span>
-            </a>
-            <nav class="hidden md:flex space-x-8 items-center">
-                <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Tentang Kami</a>
-                <a href="#features" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Fitur</a>
-                <a href="#how-it-works" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Cara Kerja</a>
-                <a href="#team" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Tim</a>
-            </nav>
-            <a href="#contact" class="hidden md:inline-block bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-700 transition-all duration-300 shadow-md">
-                Hubungi Kami
-            </a>
-            <button id="mobile-menu-button" class="md:hidden text-brand-dark-gray">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
-            </button>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden">
-            <a href="#about" class="block py-2 px-6 text-sm text-gray-600 hover:bg-brand-light-blue">Tentang Kami</a>
-            <a href="#features" class="block py-2 px-6 text-sm text-gray-600 hover:bg-brand-light-blue">Fitur</a>
-            <a href="#how-it-works" class="block py-2 px-6 text-sm text-gray-600 hover:bg-brand-light-blue">Cara Kerja</a>
-            <a href="#team" class="block py-2 px-6 text-sm text-gray-600 hover:bg-brand-light-blue">Tim</a>
-            <a href="#contact" class="block py-4 px-6 text-sm text-blue-600 font-semibold hover:bg-brand-light-blue">Hubungi Kami</a>
-        </div>
+    <header
+      class="bg-brand-bg/80 backdrop-blur-lg sticky top-0 z-50 border-b border-brand-mid-blue/50"
+    >
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a href="#" class="text-2xl font-bold text-brand-text">
+          Paket.<span class="text-blue-600">in</span>
+        </a>
+        <nav class="hidden md:flex space-x-8 items-center">
+          <a
+            href="#about"
+            class="text-gray-600 hover:text-blue-600 transition-colors duration-300"
+            >Tentang Kami</a
+          >
+          <a
+            href="#features"
+            class="text-gray-600 hover:text-blue-600 transition-colors duration-300"
+            >Fitur</a
+          >
+          <a
+            href="#how-it-works"
+            class="text-gray-600 hover:text-blue-600 transition-colors duration-300"
+            >Cara Kerja</a
+          >
+          <a
+            href="#team"
+            class="text-gray-600 hover:text-blue-600 transition-colors duration-300"
+            >Tim</a
+          >
+        </nav>
+        <a
+          href="#contact"
+          class="hidden md:inline-block bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-700 transition-all duration-300 shadow-md"
+        >
+          Hubungi Kami
+        </a>
+        <button id="mobile-menu-button" class="md:hidden text-brand-dark-gray">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden">
+        <a
+          href="#about"
+          class="block py-2 px-6 text-sm text-gray-600 hover:bg-brand-light-blue"
+          >Tentang Kami</a
+        >
+        <a
+          href="#features"
+          class="block py-2 px-6 text-sm text-gray-600 hover:bg-brand-light-blue"
+          >Fitur</a
+        >
+        <a
+          href="#how-it-works"
+          class="block py-2 px-6 text-sm text-gray-600 hover:bg-brand-light-blue"
+          >Cara Kerja</a
+        >
+        <a
+          href="#team"
+          class="block py-2 px-6 text-sm text-gray-600 hover:bg-brand-light-blue"
+          >Tim</a
+        >
+        <a
+          href="#contact"
+          class="block py-4 px-6 text-sm text-blue-600 font-semibold hover:bg-brand-light-blue"
+          >Hubungi Kami</a
+        >
+      </div>
     </header>
 
     <!-- Main Content -->
     <main>
-        <!-- Hero Section -->
-        <section class="relative pt-24 pb-24 md:pt-32 md:pb-32">
-            <div class="absolute inset-0 bg-brand-light-blue/50 opacity-50 -z-10"></div>
-            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
-                <div class="text-center md:text-left">
-                    <h1 class="text-4xl md:text-6xl font-extrabold text-brand-dark-gray leading-tight mb-4">
-                        Kirim Paket <span class="gradient-text">Tanpa Antre</span>, Tanpa Ribet.
-                    </h1>
-                    <p class="text-lg text-gray-600 mb-8 max-w-lg mx-auto md:mx-0">
-                        Paket.in adalah kios pengiriman mandiri pertama di Indonesia. Timbang, bayar, dan cetak resi hanya dalam hitungan menit. Ucapkan selamat tinggal pada antrean panjang!
-                    </p>
-                    <a href="#how-it-works" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition-all duration-300 shadow-xl inline-block">
-                        Lihat Cara Kerjanya
-                    </a>
-                </div>
-                <div class="flex justify-center items-center">
-                    <img src="assets/produk.png" alt="Ilustrasi Mesin Kios Paket.in" class="max-w-xs md:max-w-sm lg:max-w-md drop-shadow-2xl">
-                </div>
+      <!-- Hero Section -->
+      <section class="relative pt-24 pb-24 md:pt-32 md:pb-32">
+        <div
+          class="absolute inset-0 bg-brand-light-blue/50 opacity-50 -z-10"
+        ></div>
+        <div
+          class="container mx-auto px-6 grid md:grid-cols-2 gap-10 items-center"
+        >
+          <div class="text-center md:text-left">
+            <h1
+              class="text-4xl md:text-6xl font-extrabold text-brand-dark-gray leading-tight mb-4"
+            >
+              Kirim Paket <span class="gradient-text">Tanpa Antre</span>, Tanpa
+              Ribet.
+            </h1>
+            <p class="text-lg text-gray-600 mb-8 max-w-lg mx-auto md:mx-0">
+              Paket.in adalah kios pengiriman mandiri pertama di Indonesia.
+              Timbang, bayar, dan cetak resi hanya dalam hitungan menit. Ucapkan
+              selamat tinggal pada antrean panjang!
+            </p>
+            <a
+              href="#how-it-works"
+              class="bg-blue-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition-all duration-300 shadow-xl inline-block"
+            >
+              Lihat Cara Kerjanya
+            </a>
+          </div>
+          <div class="flex justify-center items-center">
+            <img
+              src="assets/produk2.jpg"
+              alt="Ilustrasi Mesin Kios Paket.in"
+              class="max-w-xs md:max-w-sm lg:max-w-md drop-shadow-2xl"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- About Us Section -->
+      <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-3xl font-bold text-brand-dark-gray mb-4">
+            Tentang Paket.in
+          </h2>
+          <div class="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
+          <p class="max-w-3xl mx-auto text-gray-600 text-lg">
+            Kami lahir dari pengalaman frustasi melihat antrean panjang dan
+            proses yang tidak efisien di gerai logistik. Misi kami adalah
+            merevolusi industri ini dengan menyediakan solusi yang cepat, mudah,
+            dan dapat diakses 24/7. Dengan kios Paket.in, kami memberdayakan
+            individu dan UMKM untuk mengirim barang dengan cara yang lebih
+            cerdas dan modern.
+          </p>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section id="features" class="py-20 bg-brand-bg">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-brand-dark-gray mb-4">
+              Fitur Unggulan Kami
+            </h2>
+            <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+          </div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Feature 1 -->
+            <div
+              class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+            >
+              <div
+                class="bg-brand-light-blue text-blue-600 rounded-full h-16 w-16 flex items-center justify-center mb-6"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-8 w-8"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l-3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Timbangan Presisi</h3>
+              <p class="text-gray-600">
+                Sensor akurat menimbang berat dan dimensi paket secara otomatis
+                untuk perhitungan ongkir yang tepat.
+              </p>
             </div>
-        </section>
-
-        <!-- About Us Section -->
-        <section id="about" class="py-20 bg-white">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold text-brand-dark-gray mb-4">Tentang Paket.in</h2>
-                <div class="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
-                <p class="max-w-3xl mx-auto text-gray-600 text-lg">
-                    Kami lahir dari pengalaman frustasi melihat antrean panjang dan proses yang tidak efisien di gerai logistik. Misi kami adalah merevolusi industri ini dengan menyediakan solusi yang cepat, mudah, dan dapat diakses 24/7. Dengan kios Paket.in, kami memberdayakan individu dan UMKM untuk mengirim barang dengan cara yang lebih cerdas dan modern.
-                </p>
+            <!-- Feature 2 -->
+            <div
+              class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+            >
+              <div
+                class="bg-brand-light-blue text-blue-600 rounded-full h-16 w-16 flex items-center justify-center mb-6"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-8 w-8"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Input Data Mudah</h3>
+              <p class="text-gray-600">
+                Layar sentuh intuitif memudahkan Anda memasukkan detail penerima
+                dan pengirim tanpa salah ketik.
+              </p>
             </div>
-        </section>
-
-        <!-- Features Section -->
-        <section id="features" class="py-20 bg-brand-bg">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold text-brand-dark-gray mb-4">Fitur Unggulan Kami</h2>
-                    <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
-                </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Feature 1 -->
-                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-                        <div class="bg-brand-light-blue text-blue-600 rounded-full h-16 w-16 flex items-center justify-center mb-6">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l-3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" /></svg>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Timbangan Presisi</h3>
-                        <p class="text-gray-600">Sensor akurat menimbang berat dan dimensi paket secara otomatis untuk perhitungan ongkir yang tepat.</p>
-                    </div>
-                    <!-- Feature 2 -->
-                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-                         <div class="bg-brand-light-blue text-blue-600 rounded-full h-16 w-16 flex items-center justify-center mb-6">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Input Data Mudah</h3>
-                        <p class="text-gray-600">Layar sentuh intuitif memudahkan Anda memasukkan detail penerima dan pengirim tanpa salah ketik.</p>
-                    </div>
-                    <!-- Feature 3 -->
-                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-                         <div class="bg-brand-light-blue text-blue-600 rounded-full h-16 w-16 flex items-center justify-center mb-6">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01M12 12v.01M12 12v-1m0 4v1m0-1v-.01M12 16c-1.11 0-2.08-.402-2.599-1M12 16v1M3 3h18v18H3V3z" /></svg>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Pembayaran QRIS</h3>
-                        <p class="text-gray-600">Bayar ongkos kirim secara instan dan aman menggunakan metode pembayaran QRIS dari e-wallet atau m-banking Anda.</p>
-                    </div>
-                    <!-- Feature 4 -->
-                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-                         <div class="bg-brand-light-blue text-blue-600 rounded-full h-16 w-16 flex items-center justify-center mb-6">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" /></svg>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Cetak Resi & Stiker</h3>
-                        <p class="text-gray-600">Mesin akan otomatis mencetak struk pembayaran dan stiker pengiriman untuk langsung ditempel pada paket.</p>
-                    </div>
-                </div>
+            <!-- Feature 3 -->
+            <div
+              class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+            >
+              <div
+                class="bg-brand-light-blue text-blue-600 rounded-full h-16 w-16 flex items-center justify-center mb-6"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-8 w-8"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01M12 12v.01M12 12v-1m0 4v1m0-1v-.01M12 16c-1.11 0-2.08-.402-2.599-1M12 16v1M3 3h18v18H3V3z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Pembayaran QRIS</h3>
+              <p class="text-gray-600">
+                Bayar ongkos kirim secara instan dan aman menggunakan metode
+                pembayaran QRIS dari e-wallet atau m-banking Anda.
+              </p>
             </div>
-        </section>
-        
-        <!-- How It Works Section -->
-        <section id="how-it-works" class="py-20 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold text-brand-dark-gray mb-4">Hanya 4 Langkah Mudah</h2>
-                    <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
-                </div>
-                <div class="relative">
-                    <!-- Connector Line -->
-                    <div class="hidden md:block absolute top-8 left-1/2 w-0.5 h-[calc(100%-4rem)] bg-brand-mid-blue"></div>
-                    
-                    <div class="space-y-16">
-                        <!-- Step 1 -->
-                        <div class="flex flex-col md:flex-row items-center">
-                            <div class="md:w-1/2 md:pr-12 text-center md:text-right">
-                                <h3 class="text-2xl font-bold text-blue-600 mb-2">1. Letakkan & Timbang Paket</h3>
-                                <p class="text-gray-600">Letakkan paket Anda di area timbangan. Mesin akan secara otomatis mengukur berat dan dimensi paket.</p>
-                            </div>
-                            <div class="relative md:w-1/2 md:pl-12 mt-4 md:mt-0">
-                                <div class="absolute -left-4 md:left-1/2 md:-translate-x-1/2 top-1/2 -translate-y-1/2 z-10 w-16 h-16 bg-white border-4 border-blue-600 rounded-full flex items-center justify-center text-blue-600 font-bold text-2xl">1</div>
-                            </div>
-                        </div>
-
-                        <!-- Step 2 -->
-                         <div class="flex flex-col md:flex-row-reverse items-center">
-                            <div class="md:w-1/2 md:pl-12 text-center md:text-left">
-                                <h3 class="text-2xl font-bold text-blue-600 mb-2">2. Masukkan Detail</h3>
-                                <p class="text-gray-600">Isi data pengirim dan penerima pada layar sentuh. Pilih jenis layanan pengiriman yang Anda inginkan.</p>
-                            </div>
-                            <div class="relative md:w-1/2 md:pr-12 mt-4 md:mt-0">
-                                <div class="absolute -right-4 md:right-auto md:left-1/2 md:-translate-x-1/2 top-1/2 -translate-y-1/2 z-10 w-16 h-16 bg-white border-4 border-blue-600 rounded-full flex items-center justify-center text-blue-600 font-bold text-2xl">2</div>
-                            </div>
-                        </div>
-
-                        <!-- Step 3 -->
-                        <div class="flex flex-col md:flex-row items-center">
-                            <div class="md:w-1/2 md:pr-12 text-center md:text-right">
-                                <h3 class="text-2xl font-bold text-blue-600 mb-2">3. Bayar dengan QRIS</h3>
-                                <p class="text-gray-600">Pindai kode QRIS yang muncul di layar dengan aplikasi perbankan atau e-wallet Anda untuk menyelesaikan pembayaran.</p>
-                            </div>
-                            <div class="relative md:w-1/2 md:pl-12 mt-4 md:mt-0">
-                               <div class="absolute -left-4 md:left-1/2 md:-translate-x-1/2 top-1/2 -translate-y-1/2 z-10 w-16 h-16 bg-white border-4 border-blue-600 rounded-full flex items-center justify-center text-blue-600 font-bold text-2xl">3</div>
-                            </div>
-                        </div>
-
-                        <!-- Step 4 -->
-                        <div class="flex flex-col md:flex-row-reverse items-center">
-                            <div class="md:w-1/2 md:pl-12 text-center md:text-left">
-                                <h3 class="text-2xl font-bold text-blue-600 mb-2">4. Cetak & Tempel</h3>
-                                <p class="text-gray-600">Ambil struk dan stiker pengiriman yang keluar dari mesin. Tempelkan stiker pada paket Anda dan masukkan ke dalam boks penyimpanan.</p>
-                            </div>
-                            <div class="relative md:w-1/2 md:pr-12 mt-4 md:mt-0">
-                                <div class="absolute -right-4 md:right-auto md:left-1/2 md:-translate-x-1/2 top-1/2 -translate-y-1/2 z-10 w-16 h-16 bg-white border-4 border-blue-600 rounded-full flex items-center justify-center text-blue-600 font-bold text-2xl">4</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <!-- Feature 4 -->
+            <div
+              class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+            >
+              <div
+                class="bg-brand-light-blue text-blue-600 rounded-full h-16 w-16 flex items-center justify-center mb-6"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-8 w-8"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Cetak Resi & Stiker</h3>
+              <p class="text-gray-600">
+                Mesin akan otomatis mencetak struk pembayaran dan stiker
+                pengiriman untuk langsung ditempel pada paket.
+              </p>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- Team Section -->
-        <section id="team" class="py-20 bg-brand-bg">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold text-brand-dark-gray mb-4">Tim di Balik Inovasi</h2>
-                    <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+      <!-- How It Works Section -->
+      <section id="how-it-works" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-brand-dark-gray mb-4">
+              Hanya 4 Langkah Mudah
+            </h2>
+            <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+          </div>
+          <div class="relative">
+            <!-- Connector Line -->
+            <div
+              class="hidden md:block absolute top-8 left-1/2 w-0.5 h-[calc(100%-4rem)] bg-brand-mid-blue"
+            ></div>
+
+            <div class="space-y-16">
+              <!-- Step 1 -->
+              <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 md:pr-12 text-center md:text-right">
+                  <h3 class="text-2xl font-bold text-blue-600 mb-2">
+                    1. Letakkan & Timbang Paket
+                  </h3>
+                  <p class="text-gray-600">
+                    Letakkan paket Anda di area timbangan. Mesin akan secara
+                    otomatis mengukur berat dan dimensi paket.
+                  </p>
                 </div>
-                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-center">
-                    <!-- Team Member 1 -->
-                    <div class="bg-white rounded-lg p-6 text-center shadow-lg transform hover:scale-105 transition-transform duration-300">
-                        <img src="https://placehold.co/200x200/BCCCDC/FFFFFF?text=FS" alt="Foto Fadhlureza Sebastian" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-brand-light-blue">
-                        <h3 class="text-xl font-bold text-brand-dark-gray">Fadhlureza Sebastian</h3>
-                        <p class="text-gray-500">2306161971</p>
-                    </div>
-                    <!-- Team Member 2 -->
-                    <div class="bg-white rounded-lg p-6 text-center shadow-lg transform hover:scale-105 transition-transform duration-300">
-                        <img src="https://placehold.co/200x200/BCCCDC/FFFFFF?text=MIK" alt="Foto Muhammad Ikhsan Kurniawan" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-brand-light-blue">
-                        <h3 class="text-xl font-bold text-brand-dark-gray">Muhammad Ikhsan K.</h3>
-                        <p class="text-gray-500">2306210784</p>
-                    </div>
-                    <!-- Team Member 3 -->
-                    <div class="bg-white rounded-lg p-6 text-center shadow-lg transform hover:scale-105 transition-transform duration-300">
-                        <img src="https://placehold.co/200x200/BCCCDC/FFFFFF?text=SH" alt="Foto Shafwan Hasyim" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-brand-light-blue">
-                        <h3 class="text-xl font-bold text-brand-dark-gray">Shafwan Hasyim</h3>
-                        <p class="text-gray-500">2306209113</p>
-                    </div>
+                <div class="relative md:w-1/2 md:pl-12 mt-4 md:mt-0">
+                  <div
+                    class="absolute -left-4 md:left-1/2 md:-translate-x-1/2 top-1/2 -translate-y-1/2 z-10 w-16 h-16 bg-white border-4 border-blue-600 rounded-full flex items-center justify-center text-blue-600 font-bold text-2xl"
+                  >
+                    1
+                  </div>
                 </div>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="flex flex-col md:flex-row-reverse items-center">
+                <div class="md:w-1/2 md:pl-12 text-center md:text-left">
+                  <h3 class="text-2xl font-bold text-blue-600 mb-2">
+                    2. Masukkan Detail
+                  </h3>
+                  <p class="text-gray-600">
+                    Isi data pengirim dan penerima pada layar sentuh. Pilih
+                    jenis layanan pengiriman yang Anda inginkan.
+                  </p>
+                </div>
+                <div class="relative md:w-1/2 md:pr-12 mt-4 md:mt-0">
+                  <div
+                    class="absolute -right-4 md:right-auto md:left-1/2 md:-translate-x-1/2 top-1/2 -translate-y-1/2 z-10 w-16 h-16 bg-white border-4 border-blue-600 rounded-full flex items-center justify-center text-blue-600 font-bold text-2xl"
+                  >
+                    2
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 md:pr-12 text-center md:text-right">
+                  <h3 class="text-2xl font-bold text-blue-600 mb-2">
+                    3. Bayar dengan QRIS
+                  </h3>
+                  <p class="text-gray-600">
+                    Pindai kode QRIS yang muncul di layar dengan aplikasi
+                    perbankan atau e-wallet Anda untuk menyelesaikan pembayaran.
+                  </p>
+                </div>
+                <div class="relative md:w-1/2 md:pl-12 mt-4 md:mt-0">
+                  <div
+                    class="absolute -left-4 md:left-1/2 md:-translate-x-1/2 top-1/2 -translate-y-1/2 z-10 w-16 h-16 bg-white border-4 border-blue-600 rounded-full flex items-center justify-center text-blue-600 font-bold text-2xl"
+                  >
+                    3
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 4 -->
+              <div class="flex flex-col md:flex-row-reverse items-center">
+                <div class="md:w-1/2 md:pl-12 text-center md:text-left">
+                  <h3 class="text-2xl font-bold text-blue-600 mb-2">
+                    4. Cetak & Tempel
+                  </h3>
+                  <p class="text-gray-600">
+                    Ambil struk dan stiker pengiriman yang keluar dari mesin.
+                    Tempelkan stiker pada paket Anda dan masukkan ke dalam boks
+                    penyimpanan.
+                  </p>
+                </div>
+                <div class="relative md:w-1/2 md:pr-12 mt-4 md:mt-0">
+                  <div
+                    class="absolute -right-4 md:right-auto md:left-1/2 md:-translate-x-1/2 top-1/2 -translate-y-1/2 z-10 w-16 h-16 bg-white border-4 border-blue-600 rounded-full flex items-center justify-center text-blue-600 font-bold text-2xl"
+                  >
+                    4
+                  </div>
+                </div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- Contact/CTA Section -->
-        <section id="contact" class="py-20 bg-brand-light-blue">
-             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold text-brand-dark-gray mb-4">Siap Mengubah Cara Anda Mengirim Paket?</h2>
-                <p class="max-w-2xl mx-auto text-gray-600 mb-8">
-                    Hubungi kami untuk peluang kemitraan, investasi, atau untuk mengetahui kapan kios Paket.in akan hadir di dekat Anda.
-                </p>
-                <a href="mailto:contact@paket.in" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition-all duration-300 shadow-xl inline-block">
-                    Kirim Email
-                </a>
-             </div>
-        </section>
+      <!-- Team Section -->
+      <section id="team" class="py-20 bg-brand-bg">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-brand-dark-gray mb-4">
+              Tim di Balik Inovasi
+            </h2>
+            <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+          </div>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-center">
+            <!-- Team Member 1 -->
+            <div
+              class="bg-white rounded-lg p-6 text-center shadow-lg transform hover:scale-105 transition-transform duration-300"
+            >
+              <img
+                src="assets/reza.jpg"
+                alt="Foto Fadhlureza Sebastian"
+                class="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-brand-light-blue"
+              />
+              <h3 class="text-xl font-bold text-brand-dark-gray">
+                Fadhlureza Sebastian
+              </h3>
+              <p class="text-gray-500">2306161971</p>
+            </div>
+            <!-- Team Member 2 -->
+            <div
+              class="bg-white rounded-lg p-6 text-center shadow-lg transform hover:scale-105 transition-transform duration-300"
+            >
+              <img
+                src="./assets/ikhsan.jpg"
+                alt="Foto Muhammad Ikhsan Kurniawan"
+                class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-brand-light-blue object-cover object-center"
+              />
+              <h3 class="text-xl font-bold text-brand-dark-gray">
+                Muhammad Ikhsan K.
+              </h3>
+              <p class="text-gray-500">2306210784</p>
+            </div>
+            <!-- Team Member 3 -->
+            <div
+              class="bg-white rounded-lg p-6 text-center shadow-lg transform hover:scale-105 transition-transform duration-300"
+            >
+              <img
+                src="assets/shafwan.jpg"
+                alt="Foto Shafwan Hasyim"
+                class="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-brand-light-blue"
+              />
+              <h3 class="text-xl font-bold text-brand-dark-gray">
+                Shafwan Hasyim
+              </h3>
+              <p class="text-gray-500">2306209113</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <!-- Contact/CTA Section -->
+      <section id="contact" class="py-20 bg-brand-light-blue">
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-3xl font-bold text-brand-dark-gray mb-4">
+            Siap Mengubah Cara Anda Mengirim Paket?
+          </h2>
+          <p class="max-w-2xl mx-auto text-gray-600 mb-8">
+            Hubungi kami untuk peluang kemitraan, investasi, atau untuk
+            mengetahui kapan kios Paket.in akan hadir di dekat Anda.
+          </p>
+          <a
+            href="mailto:contact@paket.in"
+            class="bg-blue-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition-all duration-300 shadow-xl inline-block"
+          >
+            Kirim Email
+          </a>
+        </div>
+      </section>
     </main>
-    
+
     <!-- Footer -->
     <footer class="bg-brand-dark-gray text-white">
-        <div class="container mx-auto px-6 py-8">
-            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-4 md:space-y-0">
-                <div>
-                    <h3 class="text-xl font-bold">Paket.<span class="text-blue-400">in</span></h3>
-                    <p class="text-sm text-gray-400">&copy; 2024 Paket.in. Semua Hak Cipta Dilindungi.</p>
-                </div>
-                <div class="flex space-x-4">
-                    <a href="#" class="text-gray-400 hover:text-white"><svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M..."></path></svg></a>
-                    <a href="#" class="text-gray-400 hover:text-white"><svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M..."></path></svg></a>
-                    <a href="#" class="text-gray-400 hover:text-white"><svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M..."></path></svg></a>
-                </div>
-            </div>
+      <div class="container mx-auto px-6 py-8">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-4 md:space-y-0"
+        >
+          <div>
+            <h3 class="text-xl font-bold">
+              Paket.<span class="text-blue-400">in</span>
+            </h3>
+            <p class="text-sm text-gray-400">
+              &copy; 2024 Paket.in. Semua Hak Cipta Dilindungi.
+            </p>
+          </div>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white"
+              ><svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M..."></path></svg
+            ></a>
+            <a href="#" class="text-gray-400 hover:text-white"
+              ><svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M..."></path></svg
+            ></a>
+            <a href="#" class="text-gray-400 hover:text-white"
+              ><svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M..."></path></svg
+            ></a>
+          </div>
         </div>
+      </div>
     </footer>
 
     <script>
-        // Simple script for mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
+      // Simple script for mobile menu toggle
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
     </script>
-
-</body>
+  </body>
 </html>
